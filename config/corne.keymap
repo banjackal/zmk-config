@@ -20,17 +20,13 @@
 };
 
 / {
-        behaviors {
-                hm: homerow_mods {
-                compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MODS";
-                #binding-cells = <2>;
-                tapping-term-ms = <200>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&kp>;
-                };
-        };
-
+//-------------------------------------------------------------
+// 3x5 key indices
+// |  1 |  2 |  3 |  4 |  5 |        |  6 |  7 |  8 |  9 | 10 | 
+// | 13 | 14 | 15 | 16 | 17 |        | 18 | 19 | 20 | 21 | 22 |
+// | 25 | 26 | 27 | 28 | 29 |        | 30 | 31 | 32 | 33 | 34 | 
+//              | 36 | 37 | 38 |   | 39 | 40 | 41 |
+//------------------------------------------------------------- 
         combos {
                 compatible = "zmk,combos";
                 combo_esc {
@@ -48,6 +44,47 @@
                 key-positions = <31 32>;
                 bindings = <&kp DEL>;                
                 };
+                combo_shift_left {
+                timeout-ms = <50>;
+                key-positions = <15 16>;
+                bindings = <&kp LSHFT>;
+                };
+                combo_shift_right {
+                timeout-ms = <50>;
+                key-positions = <19 20>;
+                bindings = <&kp LSHFT>;
+                };
+                combo_ctrl_left {
+                timeout-ms = <50>;
+                key-positions = <14 15>;
+                bindings = <&kp LCTRL>;
+                };
+                combo_ctrl_right {
+                timeout-ms = <50>;
+                key-positions = <20 21>;
+                bindings = <&kp LCTRL>;
+                };
+                combo_alt_left {
+                timeout-ms = <50>;
+                key-positions = <13 14>;
+                bindings = <&kp LALT>;
+                };
+                combo_alt_right {
+                timeout-ms = <50>;
+                key-positions = <21 22>;
+                bindings = <&kp LALT>;
+                };
+                combo_gui_left {
+                timeout-ms = <50>;
+                key-positions = <25 26>;
+                bindings = <&kp LGUI>;
+                };
+                combo_gui_right {
+                timeout-ms = <50>;
+                key-positions = <33 34>;
+                bindings = <&kp LGUI>;
+                };
+                
         };
 
         keymap {
@@ -56,8 +93,8 @@
                 dvorak_layer {
                         bindings = <
    &none &kp SQT &kp COMMA &kp DOT &kp P &kp Y                   &kp F &kp G  &kp C &kp R &kp L &none
-   &none &hm LGUI A  &hm LALT O &hm LCTRL E &hm LSHFT U &kp I    &kp D &hm LSHFT H &hm LCTRL T &hm LALT N &hm LGUI S &none
-   &none &kp SEMI &hm RALT Q &kp J &kp K &kp X                   &kp B &kp M &kp W &hm RALT V &kp Z &none
+   &none &kp A  &kp O &kp E &kp U &kp I                    &kp D &kp H &kp T &kp N &kp S &none
+   &none &kp SEMI &kp Q &kp J &kp K &kp X                   &kp B &kp M &kp W &kp V &kp Z &none
                   &none &lt NUMBERS SPACE &lt MISC TAB    &lt BLUETOOTH RET &lt SYMBOLS BSPC &none
                         >;
                 };
@@ -65,8 +102,8 @@
                 numbers_layer {
                         bindings = <
    &none &kp N1   &kp N2   &kp N3    &kp N4    &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0 &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp CAPS   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none  &none
-   &none &none    &kp RALT &none     &none     &none      &kp HOME &kp PG_DN &kp PG_UP &kp END   &none  &none
+   &none &trans &trans &trans &trans &kp CAPS   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none  &none
+   &none &none    &trans &none     &none     &none      &kp HOME &kp PG_DN &kp PG_UP &kp END   &none  &none
                          &none     &trans       &kp TAB         &kp RET &lt FUNCTION BSPC &none
                         >;
                 };
@@ -83,7 +120,7 @@
                 function_layer {
                         bindings = <
    &none &kp F1   &kp F2   &kp F3    &kp F4    &kp F5  &kp F6  &kp F7    &kp F8    &kp F9   &kp F10  &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp F11 &kp F12 &kp LSHFT &kp LCTRL &kp LALT &kp LGUI &none
+   &none &trans &trans &trans &trans &kp F11 &kp F12 &trans &trans &trans &trans &none
    &none &none    &kp RALT &none     &none     &none   &none   &none     &none     &kp RALT &none    &none
                         &none &trans &none &none &trans &none
                         >;
