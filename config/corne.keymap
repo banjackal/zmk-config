@@ -15,6 +15,10 @@
 #define MISC 4
 #define BLUETOOTH 5
 
+&lt {
+        retro-tap;
+};
+
 / {
         behaviors {
                 hm: homerow_mods {
