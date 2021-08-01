@@ -65,7 +65,7 @@
                 numbers_layer {
                         bindings = <
    &none &kp N1   &kp N2   &kp N3    &kp N4    &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0 &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp CAPS   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none  &none
+   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none  &none
    &none &none    &kp RALT &none     &none     &none      &kp HOME &kp PG_DN &kp PG_UP &kp END   &none  &none
                          &none     &trans       &kp TAB         &kp RET &lt FUNCTION BSPC &none
                         >;
@@ -92,7 +92,7 @@
                 misc_layer {
                         bindings = <
    &none &none &none &none &none &kp C_MUTE &none &none &none &none &none &none
-   &none &none &kp LC(X) &kp LC(C) &kp LC(V) &kp C_VOL_UP &none &none &none &none &none &none 
+   &none &kp CAPS &kp LC(X) &kp LC(C) &kp LC(V) &kp C_VOL_UP &none &none &none &none &none &none 
    &none &kp PSCRN &none &none &none &kp C_VOL_DN &none &none &none &none &none &none 
    &none &none &trans &none &none &none 
   
