@@ -24,7 +24,7 @@
    &none &kp SQT &kp COMMA &kp DOT &kp P &kp Y                   &kp F &kp G  &kp C &kp R &kp L &none
    &none &mt LGUI A  &mt LALT O &mt LCTRL E &mt LSHFT U &kp I    &kp D &mt LSHFT H &mt LCTRL T &mt LALT N &mt LGUI S &none
    &none &kp SEMI &mt RALT Q &kp J &kp K &kp X                   &kp B &kp M &kp W &mt RALT V &kp Z &none
-                  &none &lt NUMBERS SPACE &lt MACROS TAB    &lt BLUETOOTH ENT &lt SYMBOLS BKSP &none
+                  &none &lt NUMBERS SPACE &lt MACROS TAB    &lt BLUETOOTH ENT &lt SYMBOLS BSPC &none
                         >;
                 };
 
@@ -33,7 +33,7 @@
    &none &kp N1   &kp N2   &kp N3    &kp N4    &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0 &none
    &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp CAPS   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none  &none
    &none &none    &kp RALT &none     &none     &none      &kp HOME &kp PG_DN &kp PG_UP &kp END   &none  &none
-                         &none     &trans       &kp TAB         &kp ENT &lt FUNCTION BKSP &none
+                         &none     &trans       &kp TAB         &kp ENT &lt FUNCTION BSPC &none
                         >;
                 };
 
