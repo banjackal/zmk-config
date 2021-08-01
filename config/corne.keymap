@@ -21,13 +21,11 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MODS";
                 #binding-cells = <2>;
-                tapping-term-ms = <250>;
-                quick_tap_ms = <250>;
+                tapping-term-ms = <200>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
                 };
         };
-
 
         combos {
                 compatible = "zmk,combos";
@@ -47,14 +45,15 @@
                 bindings = <&kp DEL>;                
                 };
         };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 dvorak_layer {
                         bindings = <
    &none &kp SQT &kp COMMA &kp DOT &kp P &kp Y                   &kp F &kp G  &kp C &kp R &kp L &none
-   &none &mt LGUI A  &mt LALT O &mt LCTRL E &mt LSHFT U &kp I    &kp D &mt LSHFT H &mt LCTRL T &mt LALT N &mt LGUI S &none
-   &none &kp SEMI &mt RALT Q &kp J &kp K &kp X                   &kp B &kp M &kp W &mt RALT V &kp Z &none
+   &none &hm LGUI A  &hm LALT O &hm LCTRL E &hm LSHFT U &kp I    &kp D &hm LSHFT H &hm LCTRL T &hm LALT N &hm LGUI S &none
+   &none &kp SEMI &hm RALT Q &kp J &kp K &kp X                   &kp B &kp M &kp W &hm RALT V &kp Z &none
                   &none &lt NUMBERS SPACE &lt MISC TAB    &lt BLUETOOTH RET &lt SYMBOLS BSPC &none
                         >;
                 };
