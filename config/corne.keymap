@@ -36,6 +36,16 @@
                 key-positions = <1 2>;
                 bindings = <&kp ESC>;
                 };
+                combo_ins {
+                timeout-ms = <50>;
+                key-positions = <27 28>;
+                bindings = <&kp INS>;                
+                };
+                combo_del {
+                timeout-ms = <50>;
+                key-positions = <31 32>;
+                bindings = <&kp DEL>;                
+                };
         };
         keymap {
                 compatible = "zmk,keymap";
