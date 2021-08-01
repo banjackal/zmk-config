@@ -12,7 +12,7 @@
 #define NUMBERS 1
 #define SYMBOLS 2
 #define FUNCTION 3
-#define MACROS 4
+#define MISC 4
 #define BLUETOOTH 5
 
 / {
@@ -55,7 +55,7 @@
    &none &kp SQT &kp COMMA &kp DOT &kp P &kp Y                   &kp F &kp G  &kp C &kp R &kp L &none
    &none &mt LGUI A  &mt LALT O &mt LCTRL E &mt LSHFT U &kp I    &kp D &mt LSHFT H &mt LCTRL T &mt LALT N &mt LGUI S &none
    &none &kp SEMI &mt RALT Q &kp J &kp K &kp X                   &kp B &kp M &kp W &mt RALT V &kp Z &none
-                  &none &lt NUMBERS SPACE &lt MACROS TAB    &lt BLUETOOTH RET &lt SYMBOLS BSPC &none
+                  &none &lt NUMBERS SPACE &lt MISC TAB    &lt BLUETOOTH RET &lt SYMBOLS BSPC &none
                         >;
                 };
 
@@ -86,11 +86,11 @@
                         >;
                 };
 
-                macros_layer {
+                misc_layer {
                         bindings = <
-   &none &none &none &none &none &none &none &none &none &none &none &none
-   &none &none &none &none &none &none &none &none &none &none &none &none 
-   &none &none &none &none &none &none &none &none &none &none &none &none 
+   &none &none &none &none &none &kp C_MUTE &none &none &none &none &none &none
+   &none &none &kp LC(X) &kp LC(C) &kp LC(V) &kp C_VOL_UP &none &none &none &none &none &none 
+   &none &none &none &none &none &kp C_VOL_DN &none &none &none &none &none &none 
    &none &none &trans &none &none &none 
   
                         >;
@@ -98,9 +98,9 @@
 
                 bluetooth_layer {
                         bindings = <
-   &none &none &none &none &none &none &none &none &none &none &none &none
    &none &none &none &none &none &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none 
-   &none &none &none &none &none &none &none &none &none &none &none &none 
+   &none &none &none &none &none &none &none &bt BT_NXT  &bt BT_PRV &none &none &none
+   &none &none &none &none &none &none &none &none &none &none &bt BT_CLR &none 
                         &none &none &none &trans &none &none
                         >;
                 };
