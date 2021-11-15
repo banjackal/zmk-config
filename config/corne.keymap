@@ -20,7 +20,7 @@
         retro-tap;
 };
 &kscan0 {
-    debounce-period = <7>;
+    debounce-period = <10>;
 };
 
 / {
