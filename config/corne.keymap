@@ -17,6 +17,9 @@
 &lt {
         retro-tap;
 };
+&kscan0 {
+    debounce-period = <10>;
+};
 
 / {
         behaviors {
