@@ -13,8 +13,6 @@
 #define NUMBERS 1
 #define SYMBOLS 2
 #define FUNCTION 3
-#define MISC 4
-#define BLUETOOTH 5
 
 &lt {
         retro-tap;
@@ -44,23 +42,47 @@
                 compatible = "zmk,combos";
                 combo_esc {
                         timeout-ms = <50>;
-                        key-positions = <1 2>;
+                        key-positions = <13 14>;
                         bindings = <&kp ESC>;
                 };
                 combo_ins {
                         timeout-ms = <50>;
-                        key-positions = <27 28>;
+                        key-positions = <7 8>;
                         bindings = <&kp INS>;                
                 };
                 combo_del {
                         timeout-ms = <50>;
-                        key-positions = <31 32>;
+                        key-positions = <9 10>;
                         bindings = <&kp DEL>;                
                 };
                 combo_caps {
                         timeout-ms = <50>;
-                        key-positions = <16 19>;
+                        key-positions = <25 34>;
                         bindings = <&kp CAPS>;
+                        layers = <0>;
+                };
+                combo_enter {
+                        timeout-ms = <50>;
+                        key-positions = <21 22>;
+                        bindings = <&kp RET>;
+                        layers = <0>;
+                };
+                combo_tab {
+                        timeout-ms = <50>;
+                        key-positions = <1 2>;
+                        bindings = <&kp TAB>;
+                        layers = <0>;
+                };
+                combo_rctrl {
+                        timeout-ms = <50>;
+                        key-positions = <26 33>;
+                        bindings = <&kp RCTRL>;
+                        layers = <0>;
+                };
+                combo_ralt {
+                        timeout-ms = <50>;
+                        key-positions = <27 32>;
+                        bindings = <&kp RALT>;
                         layers = <0>;
                 };
         };
@@ -70,19 +92,19 @@
 
                 dvorak_layer {
                         bindings = <
-   &none &kp SQT &kp COMMA &kp DOT &kp P &kp Y                   &kp F &kp G  &kp C &kp R &kp L &none
-   &none &hm LGUI A  &hm LALT O &hm LCTRL E &hm LSHFT U &kp I    &kp D &hm LSHFT H &hm LCTRL T &hm LALT N &hm LGUI S &none
-   &none &kp SEMI &hm RALT Q &kp J &kp K &kp X                   &kp B &kp M &kp W &hm RALT V &kp Z &none
-                  &none &lt NUMBERS SPACE &lt MISC TAB    &lt BLUETOOTH RET &lt SYMBOLS BSPC &none
+   &none &kp Q &kp W &kp F &kp P &kp B                          &kp J &kp L &kp U &kp Y &kp SEMI &none
+   &none &kp A &kp R &kp S &kp T &kp G                          &kp M &kp N &kp E &kp I &kp O &none
+   &none &hm LSHFT Z &hm LCTRL X &hm LALT C &hm LGUI D &kp V    &kp K &hm LGUI H &hm LALT COMMA &hm LCTRL DOT &hm LSHFT SQT &none
+                  &none &none &none                             &lt NUMBERS BSPC &lt SYMBOLS SPACE &lt FUNCTION none
                         >;
                 };
 
                 numbers_layer {
                         bindings = <
    &none &kp N1   &kp N2   &kp N3    &kp N4    &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0 &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none   &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none  &none
-   &none &none    &kp RALT &none     &none     &none      &kp HOME &kp PG_DN &kp PG_UP &kp END   &none  &none
-                         &none     &trans       &kp TAB         &kp RET &lt FUNCTION BSPC &none
+   &none &none    &none &none &none &none                    &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none  &none
+   &none &none    &none &none     &none     &none      &kp HOME &kp PG_DN &kp PG_UP &kp END   &none  &none
+                         &none     &none       &none        &trans &none &none
                         >;
                 };
 
@@ -91,35 +113,16 @@
    &none &kp EXCL  &kp AT    &kp LT   &kp GT   &none     &none     &kp LBKT &kp RBKT  &kp UNDER &kp SLASH  &none
    &none &kp BSLH  &kp POUND &kp LPAR &kp RPAR &kp PIPE  &kp PRCNT &kp LBRC &kp RBRC  &kp EQUAL &kp MINUS  &none
    &none &kp QMARK &kp GRAVE &kp STAR &kp PLUS &none     &none     &kp AMPS &kp CARET &kp TILDE &kp DOLLAR &none
-                        &none &lt FUNCTION SPACE &none  &none &trans &none
+                        &none &none &none  &none &trans &none
                         >;
                 };
 
                 function_layer {
                         bindings = <
    &none &kp F1   &kp F2   &kp F3    &kp F4    &kp F5  &kp F6  &kp F7    &kp F8    &kp F9   &kp F10  &none
-   &none &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp F11 &kp F12 &kp LSHFT &kp LCTRL &kp LALT &kp LGUI &none
-   &none &none    &kp RALT &none     &none     &none   &none   &none     &none     &kp RALT &none    &none
-                        &none &trans &none &none &trans &none
-                        >;
-                };
-
-                misc_layer {
-                        bindings = <
-   &none &none &none &none &none &kp C_MUTE &none &none &none &none &none &none
-   &none &none &kp LC(X) &kp LC(C) &kp LC(V) &kp C_VOL_UP &none &none &none &none &none &none 
-   &none &kp PSCRN &none &none &none &kp C_VOL_DN &none &none &none &none &none &none 
-   &none &none &trans &none &none &none 
-  
-                        >;
-                };
-
-                bluetooth_layer {
-                        bindings = <
-   &none &none &none &none &none &none         &none        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &none       &none 
-   &none &none &none &none &none &none         &none        &bt BT_NXT   &bt BT_PRV   &none         &none       &none
-   &none &none &none &none &none &none         &none        &out OUT_BLE &out OUT_USB &none         &bt BT_CLR  &none 
-                        &none &none &none  &trans &none &none
+   &none &none &none &none &none     &kp F11   &kp F12 &none   &none     &none     &none &kp PSCRN
+   &none &bt BT_CLR    &none &bt BT_PRV     &bt BT_NXT      &none   &none   &none     &none     &out OUT_BLE &out OUT_USB    &none
+                        &none &none &none &none &none &trans
                         >;
                 };
         };
