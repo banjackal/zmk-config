@@ -98,7 +98,7 @@
    &none &kp Q &kp W &kp F &kp P &kp B                          &kp J &kp L &kp U &kp Y &kp SEMI &none
    &none &kp A &kp R &kp S &kp T &kp G                          &kp M &kp N &kp E &kp I &kp O &none
    &none &hm LSHFT Z &hm LCTRL X &hm LALT C &hm LGUI D &kp V    &kp K &hm LGUI H &hm LALT COMMA &hm LCTRL DOT &hm LSHFT SQT &none
-                  &none &none &none                             &lt NUMBERS BSPC &lt SYMBOLS SPACE &lt FUNCTION none
+                  &none &none &none                             &lt NUMBERS BSPC &lt SYMBOLS SPACE &mo FUNCTION
                         >;
                 };
 
